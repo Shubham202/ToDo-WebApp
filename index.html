@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="./firebase.js"></script>
+</head>
+<body>
+    <!-- Background -->
+    <div class="background-image">
+        <img class="dark" src="./bg-desktop-dark.jpg" alt="">
+        <img class="light display" src="./bg-desktop-light.jpg" alt="">
+    </div>
+    
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="title">
+                TO DO
+            </div>
+            <div class="theme">
+                <img class="dark" src="./icon-sun.svg" alt="">
+                <img class="light display" src="./icon-moon.svg" alt="">
+            </div>
+        </div>
+
+        <!-- Bar -->
+        <div class="new">
+            <div class="check">
+                <div class="check-mark">
+                    <img src="./icon-check.svg" alt="">
+                </div>
+            </div>
+            <div class="new-input">
+                <form onsubmit="addItem(event)">
+                    <input id="todo-input" type="text" placeholder="Create a new todo......">
+                </form>
+            </div>
+        </div>
+
+        <!-- List -->
+        <div class="items-wrapper">
+            <div class="todo-items">
+            </div>
+            <div class="items-info">
+                <div class="item-left">
+                </div>
+                <div class="item-status">
+                    <span class="all blue">All</span>
+                    <span class="active">Active</span>
+                    <span class="completed">Completed</span>
+                </div>
+                <div class="item-clear">
+                    <span>Clear Completed</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
